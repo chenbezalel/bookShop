@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+
+    <div class="modal">
+        <button class="close-modal" onclick="closeModal()">x</button>
+        <h2 class="book-name"></h2>
+        <div class="img-box"></div>
+        <p></p>
+        <h4 class="book-price">The price: <span></span></h4>
+        <h5>Rate the book:</h5>
+        <div class="rate-box">
+            <button class="plus" onclick="onChangeRating(1)">+</button>
+            <div class="rate"></div>
+            <button class="minus" onclick="onChangeRating(-1)">-</button>
+        </div>
+        <div class="save-rate"></div>
+    </div>
+
+    <h1>Welcome to my bookshop</h1>
+
+
+    <div class="create-new">
+         <span onclick="onAddBook()">Create new book</span>
+        <input type="text">
+        
+        </div>
+
+
+    <table class="books-board">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th colspan="3">Actions</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+
+
+</body>
+
+</html>
